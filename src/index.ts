@@ -13,14 +13,13 @@ WA.onInit().then(() => {
     
     // message pop up message
     // const welcomeMessage = "Willkommen in der Welt des eTeach-Netzwerks Thüringen. Viel Spaß beim Erkunden unseres Angebots und vergessen Sie nicht, die neuesten KI-Tools zu testen!";
-    // WA.ui.openPopup("welcomePopupMessage", welcomeMessage, []);
-    // showWelcomeMessage();
+    // WA.ui.openPopup("welcomePopup", welcomeMessage, []);
+    
     const welcomeMessage = "Willkommen in der Welt des eTeach-Netzwerks Thüringen. Viel Spaß beim Erkunden unseres Angebots und vergessen Sie nicht, die neuesten KI-Tools zu testen!.";
     WA.ui.openPopup("welcomePopupMessage", welcomeMessage, [{
-        label: "Close",
+        label: "Ok",
         className: "primary",
         callback: (popup) => {
-            // Close the popup when the "Close" button is pressed.
             popup.close();
         }
     }]);
@@ -41,17 +40,7 @@ WA.onInit().then(() => {
 }).catch(e => console.error(e));
 
 
-function showWelcomeMessage() {
-    const welcomeMessage = "Willkommen in der Welt des eTeach-Netzwerks Thüringen. Viel Spaß beim Erkunden unseres Angebots und vergessen Sie nicht, die neuesten KI-Tools zu testen!.";
-    WA.ui.openPopup("welcomePopupMessage", welcomeMessage, [{
-        label: "Close",
-        className: "primary",
-        callback: (popup) => {
-            // Close the popup when the "Close" button is pressed.
-            popup.close();
-        }
-    }]);
-}
+
 
 function closePopUp() {
     if (currentPopup !== undefined) {
