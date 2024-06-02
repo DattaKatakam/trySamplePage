@@ -12,8 +12,8 @@ WA.onInit().then(() => {
     console.log('Player tags: ', WA.player.tags)
     
     // message pop up message
-    const welcomeMessage = "Willkommen in der Welt des eTeach-Netzwerks Thüringen. Viel Spaß beim Erkunden unseres Angebots und vergessen Sie nicht, die neuesten KI-Tools zu testen!";
-    WA.ui.openPopup("welcomePopupMessage", welcomeMessage, []);
+    // const welcomeMessage = "Willkommen in der Welt des eTeach-Netzwerks Thüringen. Viel Spaß beim Erkunden unseres Angebots und vergessen Sie nicht, die neuesten KI-Tools zu testen!";
+    // WA.ui.openPopup("welcomePopupMessage", welcomeMessage, []);
     
     WA.room.onEnterLayer('clockZone').subscribe(() => {
         const today = new Date();
@@ -40,7 +40,7 @@ function showWelcomeMessage() {
             </button>
         </div>
     `;
-    const popup = WA.ui.openPopup("welcomePopup", welcomeMessage, [{
+    const popup = WA.ui.openPopup("welcomePopupMessage", welcomeMessage, [{
         label: "Close",
         className: "primary",
         callback: (popup) => {
