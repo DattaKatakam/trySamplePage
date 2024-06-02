@@ -8689,6 +8689,17 @@
                  "width":173.333,
                  "x":2761.3335,
                  "y":426
+                }, 
+                {
+                 "height":70,
+                 "id":25,
+                 "name":"welcomePopupMessage",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":120,
+                 "x":2375.33333333333,
+                 "y":2824.66666666667
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -9180,7 +9191,7 @@
          "y":0
         }],
  "nextlayerid":98,
- "nextobjectid":25,
+ "nextobjectid":26,
  "orientation":"orthogonal",
  "properties":[
         {

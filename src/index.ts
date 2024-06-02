@@ -13,7 +13,7 @@ WA.onInit().then(() => {
     
     // message pop up message
     const welcomeMessage = "Willkommen in der Welt des eTeach-Netzwerks Thüringen. Viel Spaß beim Erkunden unseres Angebots und vergessen Sie nicht, die neuesten KI-Tools zu testen!";
-    WA.ui.openPopup("welcomePopup", welcomeMessage, []);
+    WA.ui.openPopup("welcomePopupMessage", welcomeMessage, []);
     
     WA.room.onEnterLayer('clockZone').subscribe(() => {
         const today = new Date();
