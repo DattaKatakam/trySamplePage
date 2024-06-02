@@ -31,7 +31,24 @@ WA.onInit().then(() => {
 }).catch(e => console.error(e));
 
 
-
+function showWelcomeMessage() {
+    const welcomeMessage = `
+        <div style="font-size: 18px; color: #fff; background: #333; padding: 20px; border-radius: 10px;">
+            Welcome to the map! Enjoy your stay.
+            <button id="closePopupBtn" style="display: block; margin: 20px auto; padding: 10px 20px; background: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
+                OK
+            </button>
+        </div>
+    `;
+    const popup = WA.ui.openPopup("welcomePopup", welcomeMessage, [{
+        label: "Close",
+        className: "primary",
+        callback: (popup) => {
+            // Close the popup when the "Close" button is pressed.
+            popup.close();
+        }
+    }]);
+}
 
 function closePopUp() {
     if (currentPopup !== undefined) {
