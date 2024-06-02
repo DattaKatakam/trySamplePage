@@ -14,8 +14,17 @@ WA.onInit().then(() => {
     // message pop up message
     // const welcomeMessage = "Willkommen in der Welt des eTeach-Netzwerks Thüringen. Viel Spaß beim Erkunden unseres Angebots und vergessen Sie nicht, die neuesten KI-Tools zu testen!";
     // WA.ui.openPopup("welcomePopupMessage", welcomeMessage, []);
-    showWelcomeMessage()
-    
+    // showWelcomeMessage();
+    const welcomeMessage = "Willkommen in der Welt des eTeach-Netzwerks Thüringen. Viel Spaß beim Erkunden unseres Angebots und vergessen Sie nicht, die neuesten KI-Tools zu testen!.";
+    WA.ui.openPopup("welcomePopupMessage", welcomeMessage, [{
+        label: "Close",
+        className: "primary",
+        callback: (popup) => {
+            // Close the popup when the "Close" button is pressed.
+            popup.close();
+        }
+    }]);
+
     WA.room.onEnterLayer('clockZone').subscribe(() => {
         const today = new Date();
         const time = today.getHours() + ":" + today.getMinutes();
@@ -33,15 +42,8 @@ WA.onInit().then(() => {
 
 
 function showWelcomeMessage() {
-    const welcomeMessage = `
-        <div style="font-size: 18px; color: #fff; background: #333; padding: 20px; border-radius: 10px;">
-            Welcome to the map! Enjoy your stay.
-            <button id="closePopupBtn" style="display: block; margin: 20px auto; padding: 10px 20px; background: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
-                OK
-            </button>
-        </div>
-    `;
-    const popup = WA.ui.openPopup("welcomePopupMessage", welcomeMessage, [{
+    const welcomeMessage = "Willkommen in der Welt des eTeach-Netzwerks Thüringen. Viel Spaß beim Erkunden unseres Angebots und vergessen Sie nicht, die neuesten KI-Tools zu testen!.";
+    WA.ui.openPopup("welcomePopupMessage", welcomeMessage, [{
         label: "Close",
         className: "primary",
         callback: (popup) => {
